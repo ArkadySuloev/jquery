@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY</title>
+  	<meta charset="utf-8">
+  	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   	<style type="text/css">
+   		.panel {
+   			background-color: coral;
+   			width: 400px;
+   			height: 55px;
+   			border-radius: 10px;
+   			font-size: 15px;
+   			text-align: center;
+   			transition: 1s;
+   		}
+   		.btn {
+   			width: 400px;
+   			height: 30px;
+   			background-color: blue;
+   			color: white;
+   			border-radius: 10px;
+   			font-size: 10px;
+   			text-align: center;
+   		}
+
+   		.toggle {
+   			width: 400px;
+   			height: 200px;
+   			background-color: coral;
+   			font-size: 15px;
+   			border-radius: 10px;
+   			text-align: center;
+   		}
+   	</style>
+</head>
+<body>
+	<div class="panel">Это выезжающее меню</div>
+	<div class="btn">ПОКАЗАТЬ МЕНЮ</div>
+	<script type="text/javascript">
+		$('.btn').click(function() {
+			//$(this).slideToggle(500)
+			$('.panel').toggleClass('toggle')
+
+			if($(this).html() == 'ПОКАЗАТЬ МЕНЮ') {
+				$(this).html('СКРЫТЬ МЕНЮ')
+			} else {
+				$(this).html('ПОКАЗАТЬ МЕНЮ')
+			}
+
+		})
+	</script>
+</body>
+</html>
